@@ -75,8 +75,10 @@ export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  max-height: 12.5rem;
 
   @media screen and (min-width: 800px) {
+    max-height: 31.25rem;
   }
 
   .img--room {
