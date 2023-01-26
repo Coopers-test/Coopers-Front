@@ -20,11 +20,18 @@ export const Button = styled.button<IButtonProps>`
   color: ${(props) => props.color};
   font-weight: ${(props) => props.fontWeight};
 
-  font-family: "Public Sans";
+  font-family: "Montserrat", sans-serif;
   border: none;
   cursor: pointer;
+  z-index: 1;
 
   &:hover {
     background-color: ${(props) => props.colorHover};
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 9.375rem;
+    height: 2.5rem;
+    font-size: 0.9375rem;
   }
 `;

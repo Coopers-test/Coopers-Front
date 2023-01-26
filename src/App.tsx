@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
+import Banner from "./components/Banner";
 import Header from "./components/Header";
 import GlobalStyle from "./styles/global";
 
 function App() {
   return (
     <div>
-      <Header />
       <GlobalStyle />
+      <Header />
+      <Banner />
     </div>
   );
 }

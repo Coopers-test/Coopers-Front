@@ -16,4 +16,8 @@ export const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
   }
+
+  @media screen and (min-width: 800px) {
+    margin: 2%;
+  }
 `;

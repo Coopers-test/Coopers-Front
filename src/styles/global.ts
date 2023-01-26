@@ -8,7 +8,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     list-style: none;
     border: none;
+    
   }
+
 
   :root{
     --light-green: #4AC959;

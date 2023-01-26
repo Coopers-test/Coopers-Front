@@ -17,7 +17,7 @@ const Header = () => (
       height="40px"
       width="120px"
     >
-      Entrar
+      entrar
     </Button>
   </HeaderContainer>
 );
