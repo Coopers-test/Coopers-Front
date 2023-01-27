@@ -35,7 +35,7 @@ export const SectionList = styled.section`
     font-family: "Montserrat", sans-serif;
 
     padding: 1.75rem;
-    margin-left: -0.625rem;
+    margin: 1.25rem 0 3.25rem -0.625rem;
     position: relative;
     z-index: -1;
     transform: rotate(-2deg);
@@ -76,6 +76,26 @@ export const SectionList = styled.section`
       @media screen and (min-width: 1200px) {
         font-size: 1.5rem;
       }
+    }
+  }
+
+  .container--box--list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+
+    img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    @media screen and (min-width: 800px) {
+      flex-direction: row;
+      justify-content: center;
+
+      min-height: 37.5rem;
     }
   }
 `;

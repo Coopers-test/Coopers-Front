@@ -1,8 +1,11 @@
 import { useMediaQuery } from "react-responsive";
+
+import Graphism from "../../assets/Graphism_left.svg";
+import BoxList from "../BoxList";
 import { SectionList } from "./styles";
 
 const TodoSection = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1200px)" });
 
   return (
     <SectionList>
@@ -14,7 +17,25 @@ const TodoSection = () => {
           what's new.
         </p>
       </div>
-      {/* Aqui vai o outro componente */}
+
+      <div className="container--box--list">
+        {isDesktop && (
+          <img src={Graphism} alt="Triangles to decorate the page" />
+        )}
+        <BoxList
+          title="To-do"
+          subtitle="Take a breath."
+          subtitleSecond="Start doing."
+          setColor="var(--orange)"
+        />
+        <BoxList
+          title="Done"
+          subtitle="Congratulations!"
+          subtitleSecond="You have done x tasks."
+          setColor="var(--light-green)"
+          checked={true}
+        />
+      </div>
     </SectionList>
   );
 };

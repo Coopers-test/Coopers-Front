@@ -3,16 +3,19 @@ import "./App.css";
 import Banner from "./components/Banner";
 import Header from "./components/Header";
 import TodoSection from "./components/TodoSection";
+import { ListContextProvider } from "./context/ListContext";
 import GlobalStyle from "./styles/global";
 
 function App() {
   return (
-    <div>
-      <GlobalStyle />
-      <Header />
-      <Banner />
-      <TodoSection />
-    </div>
+    <>
+      <ListContextProvider>
+        <GlobalStyle />
+        <Header />
+        <Banner />
+        <TodoSection />
+      </ListContextProvider>
+    </>
   );
 }
 
