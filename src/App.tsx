@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import TodoSection from "./components/TodoSection";
 import { ListContextProvider } from "./context/ListContext";
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <Banner />
         <TodoSection />
+        <Footer />
       </ListContextProvider>
     </>
   );

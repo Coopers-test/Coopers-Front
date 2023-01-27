@@ -32,13 +32,13 @@ export const SectionList = styled.section`
     background: black;
     width: 105%;
     height: 7.5rem;
-    font-family: "Montserrat", sans-serif;
+    transform: rotate(-2deg);
 
+    font-family: "Montserrat", sans-serif;
     padding: 1.75rem;
     margin: 1.25rem 0 3.25rem -0.625rem;
     position: relative;
     z-index: -1;
-    transform: rotate(-2deg);
 
     @media screen and (min-width: 800px) {
       margin-left: -6.25rem;
