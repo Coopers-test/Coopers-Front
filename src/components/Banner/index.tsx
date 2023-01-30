@@ -20,7 +20,7 @@ const Banner = () => {
           color="var(--white)"
           backgroundColor="var(--light-green)"
           borderRadius="10px"
-          colorHover="var(--dar-green)"
+          colorHover="var(--dark-green)"
           fontSize="20px"
           fontWeight="500"
           height="64px"

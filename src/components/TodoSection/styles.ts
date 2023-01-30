@@ -95,7 +95,7 @@ export const SectionList = styled.section`
       flex-direction: row;
       justify-content: center;
 
-      min-height: 37.5rem;
+      min-height: 30.5rem;
     }
   }
 `;
