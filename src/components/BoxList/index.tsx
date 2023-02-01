@@ -1,3 +1,5 @@
+import { GrSend } from "react-icons/gr";
+
 import { useListContext } from "../../context/ListContext";
 import { Button } from "../Button/styles";
 import ItemList from "./ItemList";
@@ -18,7 +20,14 @@ const BoxList = ({
   setColor,
   checked,
 }: IListProps) => {
-  const { tasks } = useListContext();
+  const {
+    tasksToDo,
+    tasksDone,
+
+    createTask,
+    newTask,
+    setNewTask,
+  } = useListContext();
 
   return (
     <BoxListContainer setColor={setColor}>
@@ -28,14 +37,35 @@ const BoxList = ({
         {subtitleSecond && <p>{subtitleSecond}</p>}
       </div>
       <div className="box--list--items">
-        {tasks?.map((task, index) => (
-          <ItemList
-            key={index}
-            task={task}
-            setColor={setColor}
-            checked={checked}
-          />
-        ))}
+        {checked === true
+          ? tasksDone?.map((task, index) => (
+              <ItemList
+                key={index}
+                task={task}
+                setColor={setColor}
+                checked={checked}
+              />
+            ))
+          : tasksToDo?.map((task, index) => (
+              <ItemList
+                key={index}
+                task={task}
+                setColor={setColor}
+                checked={checked}
+              />
+            ))}
+        {checked === false && (
+          <div className="input--newTask">
+            <input
+              placeholder="Write your task here..."
+              value={newTask}
+              onChange={(event) => setNewTask(event.target.value)}
+            />
+            <button type="submit" onClick={() => createTask(newTask)}>
+              <GrSend />
+            </button>
+          </div>
+        )}
       </div>
       <div className="list--center">
         <Button

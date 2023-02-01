@@ -1,8 +1,9 @@
+import { ITask } from "../../../context/ListContext";
 import Checkbox from "../../Checkbox";
 import { BoxItem } from "./styles";
 
 export interface IListItem {
-  task: string;
+  task: ITask;
   setColor: string;
   checked?: boolean;
 }

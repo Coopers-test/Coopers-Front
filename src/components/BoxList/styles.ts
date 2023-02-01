@@ -31,4 +31,15 @@ export const BoxListContainer = styled.fieldset<IBoxListContainerProps>`
   .box--list--items {
     margin: 1.5625rem 0;
   }
+
+  .input--newTask {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
 `;
