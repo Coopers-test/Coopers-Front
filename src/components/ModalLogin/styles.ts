@@ -24,9 +24,10 @@ export const Container = styled.div`
     background-color: var(--white);
     width: 80%;
     max-width: 900px;
-    height: 80%;
+    height: 70%;
     max-height: 700px;
     border-radius: 5px;
+    overflow: scroll;
 
     .modal--close {
       display: flex;
