@@ -22,6 +22,7 @@ export const ContainerFooter = styled.footer`
     height: 100%;
     transform: rotate(-2deg);
     padding-top: 1.6875rem;
+    margin-left: -0.25rem;
   }
 
   .non--rotate {

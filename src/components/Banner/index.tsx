@@ -25,6 +25,7 @@ const Banner = () => {
           fontWeight="500"
           height="64px"
           width="300px"
+          onClick={() => window.scrollTo(0, 600)}
         >
           Go to To-do List
         </Button>

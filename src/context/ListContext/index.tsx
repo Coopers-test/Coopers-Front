@@ -17,21 +17,19 @@ interface IListContext {
   createTask: (data: string) => void;
   newTask: string;
   setNewTask: Dispatch<SetStateAction<string>>;
+  deleteAllTasks: (tasksList: ITask[]) => void;
+  deleteTask: (id: string) => void;
 }
 
-interface IProviderProps {
+export interface IProviderProps {
   children: React.ReactNode;
 }
 
 interface ITaskRes {
   data: ITask[];
 }
-
-interface ITaskReqWithoutStatus {
+interface ITaskReq {
   description: string;
-}
-
-interface ITaskReq extends ITaskReqWithoutStatus {
   status: "todo" | "done";
 }
 
@@ -87,6 +85,23 @@ export const ListContextProvider = ({ children }: IProviderProps) => {
     }
   };
 
+  const deleteAllTasks = (tasksList: ITask[]) => {
+    tasksList.forEach((task) => {
+      const id = task.id;
+      api.delete(`/tasks/${id}`).catch((err) => console.log(err));
+    });
+    getTasks();
+  };
+
+  const deleteTask = (id: string) => {
+    api
+      .delete(`/tasks/${id}`)
+      .then(() => getTasks())
+      .catch((err) => console.log(err));
+
+    getTasks();
+  };
+
   return (
     <ListContext.Provider
       value={{
@@ -98,6 +113,8 @@ export const ListContextProvider = ({ children }: IProviderProps) => {
         createTask,
         newTask,
         setNewTask,
+        deleteAllTasks,
+        deleteTask,
       }}
     >
       {children}

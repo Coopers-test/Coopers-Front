@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import Graphism from "../../assets/Graphism_left.svg";
@@ -6,11 +7,12 @@ import BoxList from "../BoxList";
 import { SectionList } from "./styles";
 
 const TodoSection = () => {
+  const { tasksDone } = useListContext();
   const isDesktop = useMediaQuery({ query: "(min-width: 1200px)" });
-  // const { tasksToDo, tasksDone } = useListContext();
+  const myRef = useRef(null);
 
   return (
-    <SectionList>
+    <SectionList id="to--list">
       <div className="blank--div"></div>
       <div className="title--list--container">
         <h2>To-do List</h2>
@@ -30,15 +32,15 @@ const TodoSection = () => {
           subtitleSecond="Start doing."
           setColor="var(--orange)"
           checked={false}
-          // tasks= {tasksToDo}
         />
         <BoxList
           title="Done"
           subtitle="Congratulations!"
-          subtitleSecond="You have done x tasks."
+          subtitleSecond={`You have done ${tasksDone.length} ${
+            tasksDone.length === 1 ? "task" : "tasks"
+          }.`}
           setColor="var(--light-green)"
           checked={true}
-          // tasks= {tasksDone}
         />
       </div>
     </SectionList>

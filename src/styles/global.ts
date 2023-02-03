@@ -545,7 +545,8 @@ const GlobalStyle = createGlobalStyle`
     --black: #000000;
     --orange: #E88D39;
     --white: #FFFFFF;
-    --gray: #9499B3
+    --gray: #9499B3;
+    --dark-gray: #999999;
   }
 `;
 

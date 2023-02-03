@@ -5,6 +5,7 @@ export const BoxItem = styled.div`
 
   label {
     display: flex;
+    align-items: center;
     gap: 0.625rem;
   }
 `;

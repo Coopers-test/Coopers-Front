@@ -33,9 +33,14 @@ export const BoxListContainer = styled.fieldset<IBoxListContainerProps>`
   }
 
   .input--newTask {
-    margin: 1rem;
     display: flex;
     justify-content: space-between;
+
+    margin: 1rem;
+
+    input {
+      font-family: "Montserrat";
+    }
 
     button {
       background-color: transparent;

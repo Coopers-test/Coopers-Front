@@ -7,7 +7,7 @@ interface ICheckboxWrapperProps {
 export const CheckboxWrapper = styled.div<ICheckboxWrapperProps>`
   input[type="checkbox"] {
     appearance: none;
-    width: 1rem;
+    width: 1.1rem;
     height: 1rem;
     border-radius: 100%;
     margin-right: 0.5rem;
@@ -31,6 +31,21 @@ export const CheckboxWrapper = styled.div<ICheckboxWrapperProps>`
 
     &:focus {
       box-shadow: 0 0 0.3125rem ${(props) => props.setColor};
+    }
+  }
+
+  .description--delete {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: transparent;
+      cursor: pointer;
+      color: var(--dark-gray);
+      font-weight: 700;
+      font-size: 12px;
+      font-family: "Montserrat";
     }
   }
 `;

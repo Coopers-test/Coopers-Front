@@ -3,7 +3,7 @@ import { IListItem } from "../BoxList/ItemList";
 import { CheckboxWrapper } from "./styles";
 
 const Checkbox = ({ task, setColor, checked }: IListItem) => {
-  const { updateStatusTask } = useListContext();
+  const { updateStatusTask, deleteTask } = useListContext();
 
   const onChange = () => {
     task.status === "todo"
@@ -13,9 +13,12 @@ const Checkbox = ({ task, setColor, checked }: IListItem) => {
 
   return (
     <CheckboxWrapper setColor={setColor}>
-      <label>
+      <label htmlFor="checkbox">
         <input type="checkbox" checked={checked} onChange={() => onChange()} />
-        {task.description}
+        <div className="description--delete">
+          {task.description}
+          <button onClick={() => deleteTask(task.id)}>delete</button>
+        </div>
       </label>
     </CheckboxWrapper>
   );

@@ -23,10 +23,10 @@ const BoxList = ({
   const {
     tasksToDo,
     tasksDone,
-
     createTask,
     newTask,
     setNewTask,
+    deleteAllTasks,
   } = useListContext();
 
   return (
@@ -54,19 +54,19 @@ const BoxList = ({
                 checked={checked}
               />
             ))}
-        {checked === false && (
-          <div className="input--newTask">
-            <input
-              placeholder="Write your task here..."
-              value={newTask}
-              onChange={(event) => setNewTask(event.target.value)}
-            />
-            <button type="submit" onClick={() => createTask(newTask)}>
-              <GrSend />
-            </button>
-          </div>
-        )}
       </div>
+      {checked === false && (
+        <div className="input--newTask">
+          <input
+            placeholder="Write your task here..."
+            value={newTask}
+            onChange={(event) => setNewTask(event.target.value)}
+          />
+          <button type="submit" onClick={() => createTask(newTask)}>
+            <GrSend />
+          </button>
+        </div>
+      )}
       <div className="list--center">
         <Button
           backgroundColor="var(--black)"
@@ -77,6 +77,11 @@ const BoxList = ({
           fontWeight="600"
           height="64px"
           width="300px"
+          onClick={() =>
+            checked === false
+              ? deleteAllTasks(tasksToDo)
+              : deleteAllTasks(tasksDone)
+          }
         >
           erase all
         </Button>

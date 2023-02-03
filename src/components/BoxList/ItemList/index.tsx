@@ -9,8 +9,11 @@ export interface IListItem {
 }
 
 const ItemList = ({ task, setColor, checked }: IListItem) => {
+  const dragStarted = (e: any, id: string) => {
+    e.dataTransfer.setData("todo", id);
+  };
   return (
-    <BoxItem>
+    <BoxItem draggable onDragStart={(e) => dragStarted(e, task.id)}>
       <Checkbox task={task} setColor={setColor} checked={checked} />
     </BoxItem>
   );

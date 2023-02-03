@@ -18,25 +18,25 @@ const Form = () => {
           </div>
         </div>
         <form>
-          <label>
+          <label htmlFor="name">
             {" "}
             Your name
             <input placeholder="Your name here..." />
           </label>
           <div className="container--input--row">
-            <label>
+            <label htmlFor="email">
               {" "}
               E-mail*
               <input placeholder="example@example.com" />
             </label>
-            <label>
+            <label htmlFor="cellphone">
               {" "}
               Telephone*
               <input placeholder="()____-____" />
             </label>
           </div>
 
-          <label>
+          <label htmlFor="message">
             {" "}
             Message
             <textarea placeholder="Type what you want to say to us" />
