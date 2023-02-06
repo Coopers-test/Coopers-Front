@@ -22,8 +22,6 @@ Para rodar a aplicação em sua máquina, basta dar os seguintes comandos:
 
 <strong>yarn install</strong>
 
-<strong>yarn build</strong>
-
 <strong>yarn yarn start</strong>
 
 Abra http://localhost:3000 para visualizar no navegador.
