@@ -61,15 +61,26 @@ const ModalLogin = () => {
                 fontSize="14px"
                 fontWeight="600"
                 height="40px"
-                width="120px"
+                width="100%"
                 // onClick={() => setIsModalLoginOpen(true)}
                 type="submit"
               >
                 Sign in
               </Button>
-              <button onClick={() => handleModal()}>
+              <Button
+                backgroundColor="var(--light-gray)"
+                color="var(--white)"
+                borderRadius="0px"
+                colorHover="var(--dark-gray)"
+                fontSize="14px"
+                fontWeight="600"
+                height="40px"
+                width="120px"
+                onClick={() => handleModal()}
+                type="button"
+              >
                 Não possui conta? Registre-se aqui
-              </button>
+              </Button>
             </form>
           </div>
         </Container>

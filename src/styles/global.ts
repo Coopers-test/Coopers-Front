@@ -545,6 +545,7 @@ const GlobalStyle = createGlobalStyle`
     --black: #000000;
     --orange: #E88D39;
     --white: #FFFFFF;
+    --light-gray: #c6c6c6;
     --gray: #9499B3;
     --dark-gray: #999999;
   }

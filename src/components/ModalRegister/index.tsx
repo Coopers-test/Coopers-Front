@@ -72,10 +72,23 @@ const ModalRegister = () => {
                 fontWeight="600"
                 height="40px"
                 width="120px"
-                // onClick={() => handleModal()}
                 type="submit"
               >
                 Register
+              </Button>
+              <Button
+                backgroundColor="var(--light-gray)"
+                color="var(--white)"
+                borderRadius="0px"
+                colorHover="var(--dark-gray)"
+                fontSize="14px"
+                fontWeight="600"
+                height="40px"
+                width="120px"
+                onClick={() => handleModal()}
+                type="button"
+              >
+                Volte para a tela de login
               </Button>
             </form>
           </div>

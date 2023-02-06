@@ -24,10 +24,10 @@ export const Container = styled.div`
     background-color: var(--white);
     width: 80%;
     max-width: 900px;
-    height: 70%;
+    /* height: 70%; */
     max-height: 700px;
     border-radius: 5px;
-    overflow: scroll;
+    /* overflow: scroll; */
 
     .modal--close {
       display: flex;
@@ -125,9 +125,13 @@ export const Container = styled.div`
       button {
         @media screen and (min-width: 800px) {
           width: 100%;
-          margin-top: 10px;
+          /* margin-top: 10px; */
           height: 50px;
         }
+      }
+
+      button + button {
+        margin-bottom: 15px;
       }
     }
   }
