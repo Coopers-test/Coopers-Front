@@ -43,7 +43,6 @@ const ListContext = createContext({} as IListContext);
 export const ListContextProvider = ({ children }: IProviderProps) => {
   const [tasks, setTasks] = useState<ITask[]>([]);
   const [newTask, setNewTask] = useState<string>("");
-  const [backup, setBackup] = useState<ITask[]>([]);
   const [tasksToDo, setTasksTodo] = useState<ITask[]>([]);
   const [tasksDone, setTasksDone] = useState<ITask[]>([]);
 

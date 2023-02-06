@@ -1,4 +1,5 @@
 import { GrSend } from "react-icons/gr";
+import { useRef } from "react";
 
 import { useListContext } from "../../context/ListContext";
 import { Button } from "../Button/styles";
@@ -38,20 +39,23 @@ const BoxList = ({
       </div>
       <div className="box--list--items">
         {checked === true
-          ? tasksDone?.map((task, index) => (
+          ? tasksDone?.map((task) => (
               <ItemList
-                key={index}
+                key={task.id}
                 task={task}
                 setColor={setColor}
                 checked={checked}
+                droppable={true}
               />
             ))
           : tasksToDo?.map((task, index) => (
               <ItemList
-                key={index}
+                key={task.id}
                 task={task}
                 setColor={setColor}
                 checked={checked}
+                draggable={true}
+                index={index}
               />
             ))}
       </div>

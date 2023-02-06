@@ -88,7 +88,7 @@ const ModalRegister = () => {
                 onClick={() => handleModal()}
                 type="button"
               >
-                Volte para a tela de login
+                Volte para o login
               </Button>
             </form>
           </div>
