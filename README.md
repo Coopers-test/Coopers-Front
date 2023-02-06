@@ -1,50 +1,30 @@
-# Coopers
+<h1 align="center">
+To do List
+</h1>
 
-styled components, TS, React
+<p>
+Esta é a aplicação To do list - um site pensado em auxiliar a organizar as tarefas, para a criação de hábitos saudáveis.
+É possível fazer o registro e o login, adicionar novas tarefas, mover de "a fazer" para "feita" através do checkbox, ou simplesmente uma tarefa de não concluída para o container das concluídas.
+</p>
 
-# Getting Started with Create React App
+<p><em>
+Essa aplicação foi desenvolvida utilizando React, TS, styled components, hook-forms, dentre outros.
+</em></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p>
+Link do deploy: https://to-do-list-seven-delta.vercel.app/
+</p>
 
-In the project directory, you can run:
+<p>
+Para rodar a aplicação em sua máquina, basta dar os seguintes comandos:
+</p>
 
-### `yarn start`
+<strong>yarn install</strong>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<strong>yarn build</strong>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<strong>yarn yarn start</strong>
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Abra http://localhost:3000 para visualizar no navegador.
+A página irá recarregar caso haja alguma modificação.
