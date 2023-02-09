@@ -16,19 +16,20 @@ const Banner = () => {
           <h3 className="title--green">your daily jobs</h3>
         </div>
         <p>The only way to get things done</p>
-        <Button
-          color="var(--white)"
-          backgroundColor="var(--light-green)"
-          borderRadius="10px"
-          colorHover="var(--dark-green)"
-          fontSize="20px"
-          fontWeight="500"
-          height="64px"
-          width="300px"
-          onClick={() => window.scrollTo(0, 600)}
-        >
-          Go to To-do List
-        </Button>
+        <a href="#list">
+          <Button
+            color="var(--white)"
+            backgroundColor="var(--light-green)"
+            borderRadius="10px"
+            colorHover="var(--dark-green)"
+            fontSize="20px"
+            fontWeight="500"
+            height="64px"
+            width="300px"
+          >
+            Go to To-do List
+          </Button>
+        </a>
       </div>
       {isMobile ? (
         <ImageContainer>

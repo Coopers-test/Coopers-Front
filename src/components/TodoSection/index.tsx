@@ -12,7 +12,7 @@ const TodoSection = () => {
   const myRef = useRef(null);
 
   return (
-    <SectionList id="to--list">
+    <SectionList id="list">
       <div className="blank--div"></div>
       <div className="title--list--container">
         <h2>To-do List</h2>
